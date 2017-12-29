@@ -1,6 +1,6 @@
 
 .form-container {
-	background: #e1e1e1;
+	background: #F0F7D4;
 	padding: 20px;	
 	min-height: 840px;
 }
@@ -15,6 +15,12 @@
     background-image: url("../img/card_background.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.btn {
+	border-radius: 0;
+	border-style: none;
+	background-color: #FC600A;
 }
 
 .card {
@@ -40,4 +46,9 @@
 	font-size: 17px;
 	color: #f44336;
 	cursor: pointer;
+}
+
+.emptyFormMsg {
+	color: #FF0000;
+	margin-top: 20px;
 }
