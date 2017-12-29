@@ -17,14 +17,14 @@
     background-repeat: no-repeat;
 }
 
-.btn {
+.btn, .btn:active  {
 	border-radius: 0;
 	border-style: none;
-	background-color: #FC600A;
+	background-color: #FC600A !important;
 }
 
 .btn:hover {
-	background-color: #B2D732;
+	background-color: #B2D732 !important;
 }
 
 .card {
