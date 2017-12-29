@@ -10,19 +10,24 @@
 }
 
 .col-xs-12.col-md-9 {
-    border-left: 1px solid #d9d9d9;
+    border-left: 8px solid #B2D732;
     min-height: 840px;
+    background-image: url("../img/card_background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .card {
 	border: 1px solid;
+	border-color: #fff;
+	background-color: rgba(255, 255, 255, 0.6);
 	margin-bottom: 20px;
 	height: 180px;
 	padding: 20px;
 }
 
 .card-text {
-	color: #00bcd4;
+	color: #000;
 	margin-bottom: 0px;
 }
 
