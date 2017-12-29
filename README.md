@@ -1,3 +1,3 @@
 # Profile-cards-generator
 
-![Alt text](/img/Peek 2017-12-29 20-52.gif?raw=true "Optional Title")
+![Alt text](https://raw.githubusercontent.com/korneliarohulko/Profile-cards-generator/master/img/Peek%202017-12-29%2020-52.gif?raw=true "Optional Title")
