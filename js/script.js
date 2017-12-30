@@ -13,11 +13,9 @@ var db = [
 	}
 
 	this.generateList = function(){
-
 		var parent = document.querySelector('#parent_avatar');
 		parent.innerHTML = '';
 		var template = '';
-
 		for(var i = 0; i < db.length; i++){
 		    template += '<div class="col-sm-4">';
 		    template +=  '<div class="card">';
@@ -33,22 +31,18 @@ var db = [
        		parent.insertAdjacentHTML('afterbegin', template);
        		template = '';
        		loadCards();
-        }			
-        deleteCard();  
+        	}			
+        	deleteCard();  
 	};
 
 	this.enterUser = function(){
-
 		var emptyMsg = false;
-
 		function grabUser(){
 			var name = document.querySelector('#user_name').value;
 			var email = document.querySelector('#user_email').value;
 			var age = document.querySelector('#user_age').value;
-
 			var parent = document.querySelector('.form-container');
 			var elements = [name, email, age];
-
 			if(validateUser(elements)){
 				document.querySelector("#myForm").reset();
 				db.push({name: name, email: email, age: age});
@@ -87,8 +81,6 @@ var db = [
 			db.splice(obj, 1);
 			generateList();
 		}
-
-
 		for(var i = 0;i<button.length;i++){
 			button[i].addEventListener("click", function(e){
 				deleteThis(this);
