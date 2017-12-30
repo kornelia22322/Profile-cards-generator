@@ -1,9 +1,9 @@
 var db = [
-    {name:'James Butters', email:'James@gmail.com', age: 15},
-    {name:'Mark Robinson', email:'Mark@gmail.com', age: 23},
-    {name:'Lara Barbosa', email:'Lara@gmail.com', age: 23},
-    {name:'Amy Lee', email:'amy@gmail.com', age: 28},
-    {name:'Amy Lee', email:'amy@gmail.com', age: 280}
+    {name: 'James Butters', email:'James@gmail.com', age: 15},
+    {name: 'Mark Robinson', email:'Mark@gmail.com', age: 23},
+    {name: 'Lara Barbosa', email:'Lara@gmail.com', age: 23},
+    {name: 'Amy Lee', email:'amy@gmail.com', age: 28},
+    {name: 'Amy Lee', email:'amy@gmail.com', age: 280}
 ];
 
 (function Avatars(db){
@@ -27,11 +27,11 @@ var db = [
 		    template +=     '</div>';
 		    template +=   '</div>';
 		    template += '</div>';
-       		parent.insertAdjacentHTML('afterbegin', template);
-       		template = '';
-       		loadCards();
-    	}
-    	deleteCard();
+       		    parent.insertAdjacentHTML('afterbegin', template);
+       		    template = '';
+       		    loadCards();
+    		}
+    		deleteCard();
 	};
 
 	this.enterUser = function(){
