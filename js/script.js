@@ -27,20 +27,11 @@ var db = [
 		    template +=     '</div>';
 		    template +=   '</div>';
 		    template += '</div>';
-<<<<<<< HEAD
-       	parent.insertAdjacentHTML('afterbegin', template);
-       	template = '';
-       	loadCards();
-    }
-    deleteCard();
-=======
-
        		parent.insertAdjacentHTML('afterbegin', template);
        		template = '';
        		loadCards();
-        	}			
-        	deleteCard();  
->>>>>>> 045db08a156992a25f701347a2f82cd7e40ce6ee
+    	}
+    	deleteCard();
 	};
 
 	this.enterUser = function(){
@@ -90,10 +81,6 @@ var db = [
 			db.splice(obj, 1);
 			generateList();
 		}
-<<<<<<< HEAD
-
-=======
->>>>>>> 045db08a156992a25f701347a2f82cd7e40ce6ee
 		for(var i = 0;i<button.length;i++){
 			button[i].addEventListener("click", function(e){
 				deleteThis(this);
