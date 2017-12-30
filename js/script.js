@@ -9,11 +9,10 @@ var db = [
 (function Avatars(db){
 	this.init = function(){
 		this.generateList();
-		this.enterUser();		
+		this.enterUser();
 	}
 
 	this.generateList = function(){
-
 		var parent = document.querySelector('#parent_avatar');
 		parent.innerHTML = '';
 		var template = '';
@@ -29,23 +28,20 @@ var db = [
 		    template +=     '</div>';
 		    template +=   '</div>';
 		    template += '</div>';
-
-       		parent.insertAdjacentHTML('afterbegin', template);
-       		template = '';
-       		loadCards();
-        }			
-        deleteCard();  
+       	parent.insertAdjacentHTML('afterbegin', template);
+       	template = '';
+       	loadCards();
+    }
+    deleteCard();
 	};
 
 	this.enterUser = function(){
-
 		var emptyMsg = false;
 
 		function grabUser(){
 			var name = document.querySelector('#user_name').value;
 			var email = document.querySelector('#user_email').value;
 			var age = document.querySelector('#user_age').value;
-
 			var parent = document.querySelector('.form-container');
 			var elements = [name, email, age];
 
@@ -60,7 +56,7 @@ var db = [
 			} else if(!emptyMsg) {
 				var emptyFormMsg = '';
 				emptyFormMsg += '<div class="emptyFormMsg">'+ 'Form cannot be empty' + '</div>';
-				parent.insertAdjacentHTML('beforeend', emptyFormMsg);				
+				parent.insertAdjacentHTML('beforeend', emptyFormMsg);
 				emptyMsg = true;
 			}
 		}
@@ -71,7 +67,7 @@ var db = [
 		});
 	}
 
-	this.validateUser = function(input){		
+	this.validateUser = function(input){
 		for(var i = 0; i < input.length; i++){
 			if(input[i] == ''){
 				return false;
@@ -81,28 +77,29 @@ var db = [
 	};
 
 	this.deleteCard = function(){
-		var button = document.querySelectorAll('.card-delete');	
+		var button = document.querySelectorAll('.card-delete');
+
 		function deleteThis(element){
 			var obj = element.getAttribute("data-card");
 			db.splice(obj, 1);
 			generateList();
 		}
 
-
 		for(var i = 0;i<button.length;i++){
 			button[i].addEventListener("click", function(e){
 				deleteThis(this);
 			});
-		}			
+		}
 	};
+
 	this.loadCards = function(){
 		  $( ".card" ).animate({
 		  	  height : "180px",
 		  	  width : "100%"
 		  }, 1000);
-		  setTimeout(function(){ 
-		  	$(".card-delete").css("display", "inline"); 
-		  }, 1000);		  
+		  setTimeout(function(){
+		  	$(".card-delete").css("display", "inline");
+		  }, 1000);
 	}
 	this.init();
 })(db);
